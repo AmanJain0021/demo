@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #navbar {
+            padding: 1rem 1.5rem;
+            background-color: black;
+        }
+
+        #footer {
+             position: fixed;
+            color: wheat;
+            height: 100px;
+            background-color:rgb(37, 26, 26);
+           bottom: 0px;
+           width: 100%;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+        }
+
+        ul {
+            list-style: none;
+            color: white;
+            display: flex;
+            gap: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="root"></div>
+    </header>
+
+    <footer id="footer">footer</footer>
+    <script>
+        let root = document.getElementById("root");
+        let nav = document.createElement("nav");
+        nav.setAttribute("id", "navbar");
+       
+
+        let ul1 = document.createElement("ul");
+
+        
+        let menu = ["Home", "About", "Contact"];
+        for (let i = 0; i < menu.length; i++) {
+            let li = document.createElement("li");
+            li.innerHTML = menu[i];
+            ul1.appendChild(li);
+        }
+
+        nav.appendChild(ul1);
+        root.appendChild(nav);
+
+        let footerRoot = document.getElementById("footer");
+        let ul2 = document.createElement("ul");
+
+
+        let footerValue = ["© 2025 Aman Jain. All rights reserved."];
+        for (let i = 0; i < footerValue.length; i++) {
+
+            let li = document.createElement("li");
+            li.innerHTML = footerValue[i];
+            ul2.appendChild(li);
+
+        }
+        footerRoot.innerHTML = "";
+        footerRoot.appendChild(ul2);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
